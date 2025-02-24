@@ -1,0 +1,23 @@
+#content {
+    justify-content: space-between;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#section {
+    background-color: rgb(230, 215, 86);
+    width: 400px;
+    height: 100px;
+    border-radius: 15px;
+    border: solid rgb(41, 40, 37);
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: yellow;
+}

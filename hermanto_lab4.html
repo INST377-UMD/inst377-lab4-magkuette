@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="hermanto_lab4style.css">
+    </head>
+    <h1>INST377 - Lab 4<span id="headText"></span></h1>
+    <div id="content">
+        <!-- Alert Me -->
+        <div id="section">
+            <form name="nameInput">
+                <label for="name">Name</label>
+                <input required id="name" type="text">
+                <button onclick=return(alertFunction())>Alert Me</button>
+            </form>
+        </div>
+        <!-- Change Color -->
+        <div id="section">
+            <button id="change" onclick='changeColor()'>Change Color</button>
+        </div>
+        <!-- Text Tester -->
+        <div id="section">
+            <form id="textTester">
+                <label>Text Tester</label>
+                <input id="testText" type="text">
+                <button onclick=return(validate())>Validate Text</button>
+            </form>
+        </div>
+        <!-- Add Text -->
+        <div id="section">
+            <button onclick=return(addTextFunction()) id="addText">Add Text</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // Alert Me
+        function alertFunction() {
+            var name = document.getElementById('name').value
+            alert("Hi " + name + "!")
+        }
+        // Change Color
+        function changeColor() {
+            if (document.body.style.backgroundColor == 'brown') {
+                document.body.style.backgroundColor='yellow';
+            } else {
+                document.body.style.backgroundColor = 'brown';
+            }
+        }
+        // Text Tester
+        function validate() {
+            var validation = /[!@#$%^&&()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            
+            validateInput = document.getElementById('testText').value;
+
+            if (validation.test(validateInput)) {
+                alert('How about...nah')
+            }
+        }
+        // Add Text
+        function addTextFunction() {
+            document.getElementById("headText").innerHTML = " - Add text"
+        }
+    </script>
+</html>
